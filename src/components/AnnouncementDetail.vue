@@ -10,7 +10,7 @@
 <script>
 import Vue from 'vue';
 export default {
-  name: 'hello',
+  name: 'AnnouncementDetail',
   data () {
     return {
       msg: 'ParentsCycle'
