@@ -17,9 +17,8 @@ export default {
     }
   },
   mounted() {
-
-    Vue.http.get('http://www.baidu.com').then(response => {
-
+    Vue.http.options.xhr = { withCredentials: true }
+    Vue.http.get('http://www.amidgame.cn/api/attendance/getAllLocation').then(response => {
       // get body data
       //this.someData = response.body;
       console.log("success");
@@ -28,6 +27,15 @@ export default {
       console.log("failed");
     });
 
+
+
+      //this.$http.jsonp('http://www.baidu.com/')
+      //  .then(function (response) {
+        //  console.log(response.data)
+      //}, function (response) {
+          // error callback
+        //  console.log('failed')
+      //});
   },
 }
 </script>
