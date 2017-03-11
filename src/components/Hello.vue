@@ -13,7 +13,16 @@ export default {
     return {
       msg: 'ParentsCycle'
     }
-  }
+  },
+  mounted() {
+    //this.$http.get("http://www.baidu.com").then(function(res){
+        //console.log(res);
+        //this.$set('resData',res);
+     // },function(res){
+       // console.warn(res);
+     // })
+    console.log("hahah");
+  },
 }
 </script>
 
