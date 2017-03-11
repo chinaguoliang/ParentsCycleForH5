@@ -1,4 +1,5 @@
 <template>
+
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>ParentsCycle details</h2>
@@ -7,6 +8,7 @@
 </template>
 
 <script>
+import Vue from 'vue';
 export default {
   name: 'hello',
   data () {
@@ -15,13 +17,17 @@ export default {
     }
   },
   mounted() {
-    //this.$http.get("http://www.baidu.com").then(function(res){
-        //console.log(res);
-        //this.$set('resData',res);
-     // },function(res){
-       // console.warn(res);
-     // })
-    console.log("hahah");
+
+    Vue.http.get('http://www.baidu.com').then(response => {
+
+      // get body data
+      //this.someData = response.body;
+      console.log("success");
+    }, response => {
+      // error callback
+      console.log("failed");
+    });
+
   },
 }
 </script>
