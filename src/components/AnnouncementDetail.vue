@@ -36,11 +36,12 @@
     <div class="css-auto" >
       <table height="100%" width="100%">
         <tr>
-          <td align="left" style="padding:0px 0px 0px 30px;">
+          <td align="left" style="padding:0px 0px 0px 15px;">
             <a href="company.asp" target="_self" >下载父母圈</a>
           </td>
-          <td align="right" style="padding:0px 30px 0px 0px;" height="50%">
-            <x-button type="primary" action-type="button" >下载</x-button>
+          <td align="right" style="padding:0px 15px 0px 0px;">
+            <x-button type="primary"  action-type="button"  width="60px" height="30px" @click.native="toDownload()">下载</x-button>
+
           </td>
         </tr>
       </table>
@@ -104,7 +105,12 @@ export default {
       this.id = this.$route.query.id;
       console.log("the id" + this.$route.query.id + " the name:" + this.$route.query.name);
       console.log("hah finish");
-  },
+  },methods: {
+        toDownload: function() {
+            alert("下载");
+            console.log("will download");
+        }
+   }
 }
 </script>
 
