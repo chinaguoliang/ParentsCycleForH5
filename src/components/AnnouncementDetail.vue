@@ -140,7 +140,7 @@ a {
 }
 
 .title-text-size {
-    font-size:35px
+    font-size:25px
 }
 
 .css-auto{margin:0 auto;width:100%;height:60px;position:fixed ; bottom:0px;background:#3C3C3C;}

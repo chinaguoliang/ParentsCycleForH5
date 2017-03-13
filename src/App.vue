@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div style="height:60px;line-height:60px;">父母圈</div>
+    <div style="height:60px;line-height:60px;font-size:30px;">父母圈</div>
     <router-view></router-view>
   </div>
 </template>
