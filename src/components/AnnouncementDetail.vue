@@ -1,8 +1,11 @@
 <template>
 
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>ParentsCycle details</h2>
+    <ol>
+      <li v-for="item in datas">
+        {{item.class_id}}
+      </li>
+    </ol>
 
   </div>
 </template>
@@ -13,25 +16,15 @@ export default {
   name: 'AnnouncementDetail',
   data () {
     return {
-      msg: 'ParentsCycle'
+      msg: 'ParentsCycle',
+      datas:''
     }
   },
   mounted() {
-    //Vue.http.options.xhr = { withCredentials: true }
-    //Vue.http.get('http://www.amidgame.cn/api/attendance/getAllLocation').then(response => {
-      // get body data
-      //this.someData = response.body;
-      //console.log("success");
-    //}, response => {
-      // error callback
-      //console.log("failed");
-    //});
-
-
-
       this.$http.jsonp('http://localhost:8081/videoTime/getVideoControlTime?schoolid=1&classid=')
         .then(function (response) {
           console.log(response.data)
+          this.datas = response.data.obj;
       }, function (response) {
           // error callback
           console.log('failed')
