@@ -17,25 +17,25 @@ export default {
     }
   },
   mounted() {
-    Vue.http.options.xhr = { withCredentials: true }
-    Vue.http.get('http://www.amidgame.cn/api/attendance/getAllLocation').then(response => {
+    //Vue.http.options.xhr = { withCredentials: true }
+    //Vue.http.get('http://www.amidgame.cn/api/attendance/getAllLocation').then(response => {
       // get body data
       //this.someData = response.body;
-      console.log("success");
-    }, response => {
+      //console.log("success");
+    //}, response => {
       // error callback
-      console.log("failed");
-    });
+      //console.log("failed");
+    //});
 
 
 
-      //this.$http.jsonp('http://www.baidu.com/')
-      //  .then(function (response) {
-        //  console.log(response.data)
-      //}, function (response) {
+      this.$http.jsonp('http://localhost:8081/videoTime/getVideoControlTime?schoolid=1&classid=')
+        .then(function (response) {
+          console.log(response.data)
+      }, function (response) {
           // error callback
-        //  console.log('failed')
-      //});
+          console.log('failed')
+      });
   },
 }
 </script>
