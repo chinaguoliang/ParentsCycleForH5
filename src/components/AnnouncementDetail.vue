@@ -6,7 +6,7 @@
 
 
 
-    <table border="1" >
+    <table  style="padding:30px 0px 0px 0px;">
       <tr class="title-text-size">
         <td align="left">{{title}}</td>
       </tr>
@@ -14,7 +14,7 @@
         <td align="left">{{content}}</td>
       </tr>
       <tr>
-        <td align="left">{{schoolname}}</td>
+        <td align="left" style="padding:30px 0px 0px 0px;">{{schoolname}}</td>
       </tr>
       <tr>
         <td align="left">{{schooladdress}}</td>
@@ -117,6 +117,6 @@ a {
 }
 
 .title-text-size {
-    font-size:50px
+    font-size:35px
 }
 </style>
