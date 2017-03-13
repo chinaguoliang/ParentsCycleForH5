@@ -39,8 +39,8 @@
           <td align="left" style="padding:0px 0px 0px 30px;">
             <a href="company.asp" target="_self" >下载父母圈</a>
           </td>
-          <td align="right" style="padding:0px 30px 0px 0px;">
-            <a href="company.asp" target="_self" >下载</a>
+          <td align="right" style="padding:0px 30px 0px 0px;" height="50%">
+            <x-button type="primary" action-type="button" >下载</x-button>
           </td>
         </tr>
       </table>
@@ -52,7 +52,7 @@
 <script>
 import Vue from 'vue';
 //import Swiper from 'vux';
-import { Group, Cell, Tab, TabItem, Swiper, SwiperItem, Card, Scroller } from 'vux'
+import { Group, Cell, Tab, TabItem, Swiper, SwiperItem, Card, Scroller ,XButton} from 'vux'
 
 
 export default {
@@ -89,7 +89,8 @@ export default {
     Swiper,
     SwiperItem,
     Card,
-    Scroller
+    Scroller,
+    XButton
   },mounted() {
       //this.$http.jsonp('http://localhost:8081/videoTime/getVideoControlTime?schoolid=1&classid=')
       //  .then(function (response) {
