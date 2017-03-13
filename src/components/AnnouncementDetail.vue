@@ -1,36 +1,51 @@
 <template>
 
   <div>
+    <div class="div-padding">
 
-    <swiper :list="list" :min-moving-distance="20" auto="" direction="horizontal" height="300px"></swiper>
-
-
-
-    <table  style="padding:30px 0px 0px 0px;">
-      <tr class="title-text-size">
-        <td align="left">{{title}}</td>
-      </tr>
-      <tr>
-        <td align="left">{{content}}</td>
-      </tr>
-      <tr>
-        <td align="left" style="padding:30px 0px 0px 0px;">{{schoolname}}</td>
-      </tr>
-      <tr>
-        <td align="left">{{schooladdress}}</td>
-      </tr>
-      <tr>
-        <td align="left">{{schoolphone}}</td>
-      </tr>
-    </table>
-
-    <a>传递过来的id为{{id}}</a>
-    <li v-for="item in datas">
-      {{item.class_id}}
-    </li>
+      <swiper :list="list" :min-moving-distance="20" auto="" direction="horizontal" height="300px"></swiper>
 
 
+
+      <table  style="padding:30px 0px 0px 0px;">
+        <tr class="title-text-size">
+          <td align="left">{{title}}</td>
+        </tr>
+        <tr>
+          <td align="left">{{content}}</td>
+        </tr>
+        <tr>
+          <td align="left" style="padding:30px 0px 0px 0px;">{{schoolname}}</td>
+        </tr>
+        <tr>
+          <td align="left">{{schooladdress}}</td>
+        </tr>
+        <tr>
+          <td align="left">{{schoolphone}}</td>
+        </tr>
+      </table>
+
+      <a>传递过来的id为{{id}}</a>
+      <li v-for="item in datas">
+        {{item.class_id}}
+      </li>
+    </div>
+
+
+
+    <div class="css-auto" >
+      <table  height="100%" align="center" >
+        <tr>
+          <td>
+            <a href="company.asp" target="_self">关于我们</a>|
+            <a href="intro.asp" target="_self">服务项目</a>|
+            <a href="contact.asp" target="_self">联系方式</a>|
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
+
 </template>
 
 <script>
@@ -118,5 +133,12 @@ a {
 
 .title-text-size {
     font-size:35px
+}
+
+.css-auto{margin:0 auto;width:100%;height:60px;position:fixed ; bottom:0px;background:#F00;}
+
+.div-padding {
+  padding-right: 10px;
+  padding-left: 10px;
 }
 </style>
