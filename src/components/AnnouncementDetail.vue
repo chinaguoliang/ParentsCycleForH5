@@ -1,10 +1,11 @@
 <template>
 
   <div class="hello">
+    <a>传递过来的id为{{id}}</a>
+    <li v-for="item in datas">
+      {{item.class_id}}
+    </li>
 
-      <li v-for="item in datas">
-        {{item.class_id}}
-      </li>
     <group>
       <cell title="title" value="value"></cell>
     </group>
@@ -38,10 +39,11 @@ export default {
         url: 'http://www.baidu.com',
         img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1489388986813&di=4aac1d6a4d6bfa16a10210c4ffb98e31&imgtype=0&src=http%3A%2F%2Fwww.pp3.cn%2Fuploads%2F20120713j%2F867.jpg',
         title: '播下茶籽，明春可发芽？'
-      }]
+      }],
+      id:''
     }
   },components:{
-     Group,
+    Group,
     Cell,
     Tab,
     TabItem,
@@ -59,8 +61,9 @@ export default {
         //  console.log('failed')
       //});
 
-
-      //console.log(this.$route.query.id)
+      this.id = this.$route.query.id;
+      console.log("the id" + this.$route.query.id + " the name:" + this.$route.query.name);
+      console.log("hah finish");
   },
 }
 </script>
