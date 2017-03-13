@@ -1,18 +1,16 @@
 <template>
 
   <div class="hello">
-    <!--<swiper :list="imgs" auto style="width:100%;margin:0 auto;" height="180px" dots-class="custom-bottom" dots-position="center"></swiper>-->
+
       <li v-for="item in datas">
         {{item.class_id}}
       </li>
     <group>
       <cell title="title" value="value"></cell>
     </group>
-    <scroller enable-horizontal-swiping="" lock-x="" pulldown:loading="load" scrollbar-y="" use-pulldown="">
 
-      <swiper :list="list" :min-moving-distance="20" auto="" direction="horizontal" height="180px"></swiper>
-    </scroller><scroller enable-horizontal-swiping="" lock-x="" pulldown:loading="load" scrollbar-y="" use-pulldown="">
-  </scroller>
+     <swiper :list="list" :min-moving-distance="20" auto="" direction="horizontal" height="300px"></swiper>
+
   </div>
 </template>
 
@@ -60,6 +58,9 @@ export default {
           // error callback
         //  console.log('failed')
       //});
+
+
+      //console.log(this.$route.query.id)
   },
 }
 </script>
