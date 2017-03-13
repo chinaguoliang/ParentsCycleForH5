@@ -1,16 +1,34 @@
 <template>
 
-  <div class="hello">
+  <div>
+
+    <swiper :list="list" :min-moving-distance="20" auto="" direction="horizontal" height="300px"></swiper>
+
+
+
+    <table border="1" >
+      <tr class="title-text-size">
+        <td align="left">{{title}}</td>
+      </tr>
+      <tr>
+        <td align="left">{{content}}</td>
+      </tr>
+      <tr>
+        <td align="left">{{schoolname}}</td>
+      </tr>
+      <tr>
+        <td align="left">{{schooladdress}}</td>
+      </tr>
+      <tr>
+        <td align="left">{{schoolphone}}</td>
+      </tr>
+    </table>
+
     <a>传递过来的id为{{id}}</a>
     <li v-for="item in datas">
       {{item.class_id}}
     </li>
 
-    <group>
-      <cell title="title" value="value"></cell>
-    </group>
-
-     <swiper :list="list" :min-moving-distance="20" auto="" direction="horizontal" height="300px"></swiper>
 
   </div>
 </template>
@@ -40,7 +58,12 @@ export default {
         img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1489388986813&di=4aac1d6a4d6bfa16a10210c4ffb98e31&imgtype=0&src=http%3A%2F%2Fwww.pp3.cn%2Fuploads%2F20120713j%2F867.jpg',
         title: '播下茶籽，明春可发芽？'
       }],
-      id:''
+      id:'',
+      schoolname:'test schoolname',
+      schoolphone:'test schoolphone',
+      schooladdress:'test schooladdress',
+      title:'test tile',
+      content:'test content hksdjfklsdjfksldfjskli   jssss         dsfsf          sdfsdf              niininisdfsdf     sdfsdfs '
     }
   },components:{
     Group,
@@ -86,5 +109,14 @@ li {
 
 a {
   color: #42b983;
+}
+
+.div-left {
+  float:left;
+  background:#F00;
+}
+
+.title-text-size {
+    font-size:50px
 }
 </style>
