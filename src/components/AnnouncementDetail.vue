@@ -34,12 +34,13 @@
 
 
     <div class="css-auto" >
-      <table  height="100%" align="center" >
+      <table height="100%" width="100%">
         <tr>
-          <td>
-            <a href="company.asp" target="_self">关于我们</a>|
-            <a href="intro.asp" target="_self">服务项目</a>|
-            <a href="contact.asp" target="_self">联系方式</a>|
+          <td align="left" style="padding:0px 0px 0px 30px;">
+            <a href="company.asp" target="_self" >下载父母圈</a>
+          </td>
+          <td align="right" style="padding:0px 30px 0px 0px;">
+            <a href="company.asp" target="_self" >下载</a>
           </td>
         </tr>
       </table>
@@ -135,7 +136,7 @@ a {
     font-size:35px
 }
 
-.css-auto{margin:0 auto;width:100%;height:60px;position:fixed ; bottom:0px;background:#F00;}
+.css-auto{margin:0 auto;width:100%;height:60px;position:fixed ; bottom:0px;background:#3C3C3C;}
 
 .div-padding {
   padding-right: 10px;
