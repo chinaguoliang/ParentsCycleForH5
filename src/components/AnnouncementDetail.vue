@@ -52,14 +52,14 @@ export default {
     Card,
     Scroller
   },mounted() {
-      this.$http.jsonp('http://localhost:8081/videoTime/getVideoControlTime?schoolid=1&classid=')
-        .then(function (response) {
-          console.log(response.data)
-          this.datas = response.data.obj;
-      }, function (response) {
+      //this.$http.jsonp('http://localhost:8081/videoTime/getVideoControlTime?schoolid=1&classid=')
+      //  .then(function (response) {
+      //    console.log(response.data)
+      //    this.datas = response.data.obj;
+      //}, function (response) {
           // error callback
-          console.log('failed')
-      });
+        //  console.log('failed')
+      //});
   },
 }
 </script>
