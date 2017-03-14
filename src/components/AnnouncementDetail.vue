@@ -27,7 +27,7 @@
 
       <a>传递过来的id为{{id}}</a>
       <li v-for="item in datas">
-        {{item.class_id}}
+        {{item.latitude}}
       </li>
     </div>
 
@@ -63,6 +63,7 @@ import { Group, Cell, Tab, TabItem, Swiper, SwiperItem, Card, Scroller ,XButton}
 
 
 export default {
+  datas:'',
   name: 'AnnouncementDetail',
   data () {
     return {
@@ -101,14 +102,14 @@ export default {
   },mounted() {
     //http://localhost:8080/#/?id=8879
 
-      //this.$http.jsonp('http://localhost:8081/videoTime/getVideoControlTime?schoolid=1&classid=')
-      //  .then(function (response) {
-      //    console.log(response.data)
-      //    this.datas = response.data.obj;
-      //}, function (response) {
+      this.$http.jsonp('http://yestp.com/api/attendance/getAllLocation')
+        .then(function (response) {
+          console.log(response.data)
+          this.datas = response.data.obj;
+      }, function (response) {
           // error callback
-        //  console.log('failed')
-      //});
+        console.log('failed')
+      });
 
       this.id = this.$route.query.id;
       console.log("the id" + this.$route.query.id + " the name:" + this.$route.query.name);
