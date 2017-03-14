@@ -37,12 +37,18 @@
       <table height="100%" width="100%">
         <tr>
           <td align="left" style="padding:0px 0px 0px 15px;">
-            <a href="company.asp" target="_self" >下载父母圈</a>
+            <a>父母圈教师版</a>
           </td>
           <td align="right" style="padding:0px 15px 0px 0px;"  >
             <x-button type="primary"  action-type="button"   @click.native="toDownload()">下载</x-button>
-
           </td>
+          <td align="left" style="padding:0px 0px 0px 15px;">
+            <a>父母圈家长版</a>
+          </td>
+          <td align="right" style="padding:0px 15px 0px 0px;" >
+            <x-button type="primary"  action-type="button"   @click.native="toDownload()">下载</x-button>
+          </td>
+
         </tr>
       </table>
     </div>
